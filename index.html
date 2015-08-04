@@ -16,15 +16,15 @@
 			contacto.displayName="Rayzote";
 			contacto.name= new ContactName();
 			contacto.name.givenName="Raymundo";
-			contacto.name.familyName="Gonzalez Cruz";
+			contacto.name.familyName="González Cruz";
 			contacto.phoneNumbers=[];
 			contacto.phoneNumbers=new ContactField("work","225773764",true);
-			contacto.save(function (){alert("Contacto guardado correctamente");},function(error){alert("Error: "+error.code);});
+			contacto.save(function (){alert("Contacto guardado correctamente");},function (error){alert("Error: "+error.code);});
 			});
 			
 			$("#btnLista").tap(function (){
-			navigator.contacts.find(["*"],function(contactos){
-			var elementos = $("#listaContactos");
+			navigator.contacts.find(["*"],function (contactos){
+			var elemento = $("#listaContactos");
 			for(i=0;i<contactos.length;i++){
 				var contacto=contactos[i];
 				elemento.append("<li>"+contacto.displayName+"</li>");
